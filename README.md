@@ -28,3 +28,9 @@ npm run
 ```sh
 npm run build
 ```
+
+## Cats
+
+OK, I admit, I stole those cats from Google Images, so if
+someone is mad at me and wants me to remove its cat from
+this app's cat collection, let me know ;)
