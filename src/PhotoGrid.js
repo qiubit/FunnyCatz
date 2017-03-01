@@ -19,8 +19,11 @@ class PhotoGrid extends Component {
     this.onPhotoClick = this.onPhotoClick.bind(this);
   }
 
+  // Ta funkcja ustawia stan komponentu App, mimo że bezpośrednio nie ma do niego dostępu!
+  // Typ: Int -> Void -> Void, bo onClick wymaga referencji do funkcji Void -> Void
   onPhotoClick(id) {
     var passClick = function() {
+      // To jest funkcja, którą komponent App podał do komponentu PhotoGrid
       this.props.onClick(id);
     }
     passClick = passClick.bind(this);

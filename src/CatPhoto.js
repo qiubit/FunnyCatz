@@ -20,6 +20,7 @@ class CatPhoto extends Component {
     this.setState({ hovered: false });
   }
 
+  // Wyświetla lajki po najechaniu na zdjęcie
   render() {
     return (
       <div onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} className={this.state.hovered ? "hovered" : ""}>
