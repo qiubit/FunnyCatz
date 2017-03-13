@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './CatPhoto.css';
 
 class CatPhoto extends Component {
@@ -6,7 +7,6 @@ class CatPhoto extends Component {
     super(props);
     this.state = {
       hovered: false,
-      likes: props.likes ? props.likes : 0,
     }
     this.onMouseEnter = this.onMouseEnter.bind(this);
     this.onMouseLeave = this.onMouseLeave.bind(this);
@@ -30,4 +30,10 @@ class CatPhoto extends Component {
   }
 }
 
-export default CatPhoto;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    likes: state.app.catLikes[ownProps.catId],
+  }
+}
+
+export default connect(mapStateToProps)(CatPhoto);
