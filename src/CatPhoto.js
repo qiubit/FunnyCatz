@@ -32,7 +32,7 @@ class CatPhoto extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    likes: state.app.catLikes[ownProps.catId],
+    likes: state.get('app').get('catLikes').get(ownProps.catId),
   }
 }
 

@@ -35,48 +35,48 @@ class App extends Component {
     switch (this.props.catDisplayed) {
       case 0:
         catImg = cat1;
-        catLikes = this.props.catLikes[0];
-        catLiked = this.props.catLiked[0];
+        catLikes = this.props.catLikes.get(0);
+        catLiked = this.props.catLiked.get(0);
         break;
       case 1:
         catImg = cat2;
-        catLikes = this.props.catLikes[1];
-        catLiked = this.props.catLiked[1];
+        catLikes = this.props.catLikes.get(1);
+        catLiked = this.props.catLiked.get(1);
         break;
       case 2:
         catImg = cat3;
-        catLikes = this.props.catLikes[2];
-        catLiked = this.props.catLiked[2];
+        catLikes = this.props.catLikes.get(2);
+        catLiked = this.props.catLiked.get(2);
         break;
       case 3:
         catImg = cat4;
-        catLikes = this.props.catLikes[3];
-        catLiked = this.props.catLiked[3];
+        catLikes = this.props.catLikes.get(3);
+        catLiked = this.props.catLiked.get(3);
         break;
       case 4:
         catImg = cat5;
-        catLikes = this.props.catLikes[4];
-        catLiked = this.props.catLiked[4];
+        catLikes = this.props.catLikes.get(4);
+        catLiked = this.props.catLiked.get(4);
         break;
       case 5:
         catImg = cat6;
-        catLikes = this.props.catLikes[5];
-        catLiked = this.props.catLiked[5];
+        catLikes = this.props.catLikes.get(5);
+        catLiked = this.props.catLiked.get(5);
         break;
       case 6:
         catImg = cat7;
-        catLikes = this.props.catLikes[6];
-        catLiked = this.props.catLiked[6];
+        catLikes = this.props.catLikes.get(6);
+        catLiked = this.props.catLiked.get(6);
         break;
       case 7:
         catImg = cat8;
-        catLikes = this.props.catLikes[7];
-        catLiked = this.props.catLiked[7];
+        catLikes = this.props.catLikes.get(7);
+        catLiked = this.props.catLiked.get(7);
         break;
       case 8:
         catImg = cat9;
-        catLikes = this.props.catLikes[8];
-        catLiked = this.props.catLiked[8];
+        catLikes = this.props.catLikes.get(8);
+        catLiked = this.props.catLiked.get(8);
         break;
       default:
         break;
@@ -105,9 +105,9 @@ class App extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    catDisplayed: state.app.catDisplayed,
-    catLikes: state.app.catLikes,
-    catLiked: state.app.catLiked,
+    catDisplayed: state.get('app').get('catDisplayed'),
+    catLikes: state.get('app').get('catLikes'),
+    catLiked: state.get('app').get('catLiked'),
   }
 }
 
